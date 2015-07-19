@@ -42,7 +42,13 @@ module Admin
 
 		def destroy
       page = Page.find(params[:page_id])
-      page.destroy
+
+      if page.id == 1 || page.id == 2 || page.id == 3
+      	flash[:alert] = "Core pages cannot be deleted."
+      else
+      	page.destroy
+      	flash[:notice] = "Page was destroyed."
+      end
 
       redirect_to action: 'index'
     end
