@@ -7,4 +7,8 @@ class Page < ActiveRecord::Base
 	accepts_nested_attributes_for :posts, :reject_if => :all_blank, :allow_destroy => true
 
 	validates :name, :presence => true, :uniqueness => true
+
+	DASHBOARD_MESSAGE   = "Welcome to Simple CMS."
+	DEFAULT_DESCRIPTION = "Welcome to Simple CMS, the quickest way to make a rails website."
+	DEFAULT_KEYWORDS    = "Ruby, Rails, CMS, Content Management Solution"
 end

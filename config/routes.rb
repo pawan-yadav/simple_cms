@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, :skip => [:registrations]                                          
-  as :user do
-    get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'    
-    put 'users' => 'devise/registrations#update', :as => 'user_registration'            
-  end
-
+  devise_for :users
+  
   root :to => 'pages#show', :id => '1'
   get 'admin' => "admin/admin#index"
   get '/:id' => "pages#show", :as => "pagelink"
@@ -33,6 +29,11 @@ Rails.application.routes.draw do
       collection do
         get 'move_up'
         get 'move_down'
+        get 'destroy'
+      end
+    end
+    resources :users do
+      collection do
         get 'destroy'
       end
     end
