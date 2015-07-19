@@ -18,6 +18,7 @@ group :development, :test do
   gem 'byebug', '5.0.0'
   gem 'web-console', '2.2.1'
   gem 'spring', '1.3.6'
+  gem 'rspec-rails', "3.3.3"
 end
 
 # Simple_cms gems
