@@ -11,6 +11,8 @@ class PagesController < ApplicationController
 		@contact_form = ContactForm.new(contact_form_params)
 
 		if @contact_form.save(contact_form_params)
+			ApplicationMailer.contact_form(@contact_form).deliver
+			
 			flash[:notice] = "Contact form has been sent."
 			redirect_to action: 'show', :id => Page.find(3).slug
 		else

@@ -12,6 +12,7 @@ gem 'jquery-rails', '4.0.4'
 gem 'turbolinks', '2.5.3'
 gem 'jbuilder', '2.3.1'
 gem 'sdoc', '0.4.1', group: :doc
+gem "letter_opener", "1.4.1", :group => :development
 
 group :development, :test do
   gem 'byebug', '5.0.0'
@@ -28,3 +29,11 @@ gem "font-awesome-rails", '4.3.0.0'
 gem "wysiwyg-rails", '1.2.8'
 gem 'friendly_id', '5.1.0'
 gem "cocoon", "1.2.6"
+gem 'puma', "2.12.2"
+gem 'foreman', "0.78.0"
+
+
+# Gems for Heroku
+# ----------------------------------------------
+# gem 'pg'
+# gem 'rails_12factor', group: :production
