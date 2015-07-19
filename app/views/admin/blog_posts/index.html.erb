@@ -1,0 +1,26 @@
+<div class="text-right">	
+	<%= link_to 'New Blog Post', new_admin_blog_post_path, :class => 'btn btn-primary' %>
+</div>
+
+<br />
+
+<div class="row">
+	<div class="col-sm-12">
+		<ul class="list-group">
+			<% for post in @blog_posts %>
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-sm-6">
+							<%= link_to post.name, edit_admin_blog_post_path(post) %>
+							<%= display_date(post.date) %>
+						</div>
+						<div class="col-sm-6 text-right">
+							<%= link_to(url_for(:controller => 'admin/blog_posts', :action => 'destroy', :blog_post_id => post.id), data: { confirm: 'Are you sure?' }) do %>
+								<span class="glyphicon glyphicon-trash"></span>
+							<% end %>
+						</div>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+</div>

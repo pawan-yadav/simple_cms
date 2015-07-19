@@ -1,0 +1,23 @@
+<h3>Created On: <small><%= display_date @contact_form.created_at %></small></h3>
+
+<table class="table table-striped">
+	<tr>
+		<td><strong>Name:</strong></td>
+		<td><%= @contact_form.name %></td>
+	</tr>
+
+	<tr>
+		<td><strong>Email Address:</strong></td>
+		<td><%= @contact_form.email_address %></td>
+	</tr>
+
+	<tr>
+		<td><strong>Phone Number:</strong></td>
+		<td><%= @contact_form.phone_number %></td>
+	</tr>
+
+	<tr>
+		<td><strong>Comments:</strong></td>
+		<td><%= @contact_form.comments %></td>
+	</tr>
+</table>

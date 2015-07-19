@@ -1,0 +1,25 @@
+<h1><%= @page.name %></h1>
+
+<div class="froala-view">
+	<%= @page.body.html_safe %>
+</div>
+
+
+<% if @posts %>
+	<% for post in @posts %>
+		<h2><%= post.name %> <small><%= display_date post.date %></small></h2>
+		<div class="froala-view">
+			<%= post.body.html_safe %>
+		</div>
+	<% end %>
+<% end %>
+
+<% if @page.id == 3 %>
+	<%= simple_form_for @contact_form, :url => { :controller => 'pages', :action => 'create_contact_form' } do |f| %>
+		<%= f.input :name %>
+		<%= f.input :phone_number %>
+		<%= f.input :email_address %>
+		<%= f.input :comments %>
+		<%= f.submit 'Submit', :class => 'btn btn-primary' %>
+	<% end %>
+<% end %>

@@ -1,0 +1,25 @@
+<div class="text-right">	
+	<%= link_to 'New Page', new_admin_page_path, :class => 'btn btn-primary' %>
+</div>
+
+<br />
+
+<div class="row">
+	<div class="col-sm-12">
+		<ul class="list-group">
+			<% for page in @pages %>
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-sm-6">
+							<%= link_to page.name, edit_admin_page_path(page) %>
+						</div>
+						<div class="col-sm-6 text-right">
+							<%= link_to(url_for(:controller => 'admin/pages', :action => 'destroy', :page_id => page.id), data: { confirm: 'Are you sure?' }) do %>
+								<span class="glyphicon glyphicon-trash"></span>
+							<% end %>
+						</div>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+</div>

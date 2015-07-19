@@ -1,0 +1,5 @@
+<%= form.input :menu_item_id, as: :select, collection: MenuItem.all.order('position ASC').map { |t| [t.page.name, t.id] }, label: 'parent' %>
+
+<%= form.input :page_id, as: :select, collection: Page.all.order('name ASC') %>
+
+<hr />

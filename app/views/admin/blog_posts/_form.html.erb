@@ -1,0 +1,16 @@
+<%= form.input :name %>
+<%= form.input :date %>
+
+<%= form.text_area :body, :id => 'eg-basic', :class => 'text-small' %>
+
+<hr />
+<h3>SEO</h3>
+<div class="row">
+	<div class="col-sm-6">
+		<%= form.input :description %>
+	</div>
+	<div class="col-sm-6">
+		<%= form.input :keywords, hint: 'Format: keyword,keyword,keyword' %>
+	</div>
+</div>
+<hr />
