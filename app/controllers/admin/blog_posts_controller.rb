@@ -1,6 +1,5 @@
 module Admin
 	class BlogPostsController < AdminController
-		before_filter :authenticate_user!
 
 		def index
 			@blog_posts = Post.all.order('date DESC')
@@ -62,7 +61,8 @@ module Admin
     		:name, 
     		:description,
     		:keywords,
-    		:body
+    		:body,
+    		:bootsy_image_gallery_id
     	)
   	end
 	end

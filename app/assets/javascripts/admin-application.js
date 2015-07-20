@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require froala_editor.min.js
 //= require bootstrap-sprockets
+//= require bootsy
 //= require cocoon
 //= require ./admin-main.js

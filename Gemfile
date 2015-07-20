@@ -27,7 +27,7 @@ gem 'simple_form', '3.1.0'
 gem 'devise', '3.5.1'
 gem 'bootstrap-sass', '3.3.5.1'
 gem "font-awesome-rails", '4.3.0.0'
-gem "wysiwyg-rails", '1.2.8'
+gem 'bootsy', "2.1.0"
 gem 'friendly_id', '5.1.0'
 gem "cocoon", "1.2.6"
 gem 'puma', "2.12.2"
