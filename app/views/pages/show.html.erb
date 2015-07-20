@@ -1,16 +1,12 @@
 <h1><%= @page.name %></h1>
 
-<div class="froala-view">
-	<%= @page.body.html_safe %>
-</div>
+<%= @page.body.html_safe %>
 
 
 <% if @posts %>
 	<% for post in @posts %>
 		<h2><%= post.name %> <small><%= display_date post.date %></small></h2>
-		<div class="froala-view">
-			<%= post.body.html_safe %>
-		</div>
+		<%= post.body.html_safe %>
 	<% end %>
 <% end %>
 
