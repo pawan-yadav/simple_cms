@@ -1,6 +1,5 @@
 module Admin
 	class PagesController < AdminController
-		before_filter :authenticate_user!
 
 		def index
 			@pages = Page.all.order('name ASC')
