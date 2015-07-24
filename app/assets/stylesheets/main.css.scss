@@ -12,6 +12,21 @@
 			display:block;
 		}
 	}
+	.dropdown-menu {
+		@media(max-width:767px) {
+			display: block;
+			position: relative;
+			width: 100%;
+			background: none;
+			box-shadow: none;
+			border:none;
+		}
+		li {
+			a {
+
+			}
+		}
+	}
 }
 
 .navbar {
