@@ -1,4 +1,164 @@
-<h1><%= @page.name %></h1>
+<% if @page.id == 1 %>
+	<div class="row">
+		<div class="col-sm-7">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			      <%= image_tag('saucedo_1.jpg') %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag('sign.jpg') %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag('saucedo_3.jpg') %>
+			    </div>
+			  </div>
+
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+		</div>
+		<div class="col-sm-5">
+			<div class="quick_info">
+        <div class="phone_number"><a href="tel:915-534-0008">(915) 534-0008</a></div> 
+        <a href="https://www.facebook.com/pages/Saucedo-Brothers-Lock-and-Security/212713998858190"><i class="fa fa-facebook"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <div class="address">
+          <address>
+            1309 Texas Avenue<br />
+            El Paso Texas 79901
+          </address> 
+        </div>
+        <a class="btn btn-primary btn-lg" href="/contact">Contact Us Now! <span>></span></a>
+
+        <div class="small-links">
+          <a href="https://www.google.com/maps/place/1309+Texas+Ave,+El+Paso,+TX+79901/@31.771318,-106.475025,14z/data=!4m2!3m1!1s0x86e75907d18f4a69:0xfdda5a97f4b73d56?hl=en">Find Us On The Map</a>
+        </div>
+      </div>
+		</div>
+	</div>
+<% else %>
+	<h1><%= @page.name %></h1>
+	<hr />
+<% end %>
+
+<% if @page.name == 'About' %>
+	<div class="row">
+		<div class="col-sm-7">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			      <%= image_tag('family.jpg') %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag('tons.jpg') %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag('slide1.jpg') %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag('working.jpg') %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag('mike.jpg') %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag('tony.jpg') %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag('mike2.jpg') %>
+			    </div>
+			    <div class="item">
+			      <%= image_tag('geordf.jpg') %>
+			    </div>
+			  </div>
+
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+		</div>
+		<div class="col-sm-5">
+			<h3>Lifetimes of Experience</h3>
+			<h4>Happily serving El Paso since 1917</h4>
+			<p>We are your source for Locksmith services in El Paso, Texas. We have the experience and drive to tackle any lock, key, door, commercial or residential service. We sell and work on safes, hardware and a full range of security devices. We have been keeping El Paso safe for two generations. Thanks for thinking of us and feel free to give us a call to schedule an appointment or just ask a few questions. We are your neighborhood locksmith experts.</p>
+		</div>
+	</div>
+	<br />
+	<hr />
+
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="image">
+				<%= link_to(image_tag('since_1917.jpg', class: 'img-thumbnail'), image_path('since_1917.jpg'), :class => 'fancybox', :rel => 'gallery') %>
+			</div>
+			<br />
+			<p>Serving El Paso has been a passion of the Saucedo Brothers since 1917. The first location was started by J.S. Saucedo and it was called El Paso Key Fitting. Keys while you wait was the hook on the sign out front. We have come a long way since then but we still offer the same great locksmith service to El Paso.</p>
+		</div>
+		<div class="col-sm-6">
+			<div class="image">
+				<%= link_to(image_tag('since_1917_2.jpg', class: 'img-thumbnail'), image_path('since_1917_2.jpg'), :class => 'fancybox', :rel => 'gallery') %>
+			</div>
+			<br />
+			<p>J.S. Saucedo started the El Paso Key Fitting Co. in 1917. Since then, the Saucedos have been locksmiths.</p>
+			<div class="row gallery_grid">
+				<div class="col-sm-6">
+					<%= link_to(image_tag('grands.jpg', class: 'img-thumbnail'), image_path('grands.jpg'), :class => 'fancybox', :rel => 'gallery') %>
+				</div>
+				<div class="col-sm-6">
+					<%= link_to(image_tag('shopp.jpg', class: 'img-thumbnail'), image_path('shopp.jpg'), :class => 'fancybox', :rel => 'gallery') %>
+				</div>
+				<div class="col-sm-6">
+					<%= link_to(image_tag('elpaso.jpg', class: 'img-thumbnail'), image_path('elpaso.jpg'), :class => 'fancybox', :rel => 'gallery') %>
+				</div>
+				<div class="col-sm-6">
+					<%= link_to(image_tag('cars.jpg', class: 'img-thumbnail'), image_path('cars.jpg'), :class => 'fancybox', :rel => 'gallery') %>
+				</div>
+				<div class="col-sm-6">
+					<%= link_to(image_tag('shopper.jpg', class: 'img-thumbnail'), image_path('shopper.jpg'), :class => 'fancybox', :rel => 'gallery') %>
+				</div>
+				<div class="col-sm-6">
+					<%= link_to(image_tag('humble.jpg', class: 'img-thumbnail'), image_path('humble.jpg'), :class => 'fancybox', :rel => 'gallery') %>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
 
 <%= @page.body.html_safe %>
 
@@ -13,8 +173,14 @@
 <% if @page.id == 3 %>
 	<%= simple_form_for @contact_form, :url => { :controller => 'pages', :action => 'create_contact_form' } do |f| %>
 		<%= f.input :name %>
-		<%= f.input :phone_number %>
-		<%= f.input :email_address %>
+		<div class="row">
+			<div class="col-sm-6">
+				<%= f.input :phone_number %>
+			</div>
+			<div class="col-sm-6">
+				<%= f.input :email_address %>
+			</div>
+		</div>
 		<%= f.input :comments %>
 		<%= f.submit 'Submit', :class => 'btn btn-primary' %>
 	<% end %>

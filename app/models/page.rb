@@ -10,7 +10,7 @@ class Page < ActiveRecord::Base
 
 	validates :name, :presence => true, :uniqueness => true
 
-	DASHBOARD_MESSAGE   = "Welcome to Simple CMS."
-	DEFAULT_DESCRIPTION = "Welcome to Simple CMS, the quickest way to make a rails website."
-	DEFAULT_KEYWORDS    = "Ruby, Rails, CMS, Content Management Solution"
+	DASHBOARD_MESSAGE   = "Welcome to Saucedo Brothers CMS."
+	DEFAULT_DESCRIPTION = "El Paso locksmith services and products. We have safes, keys and locks."
+	DEFAULT_KEYWORDS    = "El Paso Locksmith, Keys, locks, safes, locksmiths, el paso"
 end
