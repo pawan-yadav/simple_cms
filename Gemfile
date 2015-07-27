@@ -39,5 +39,5 @@ gem 'fancybox2-rails', '0.2.8'
 
 # Gems for Heroku
 # ----------------------------------------------
-# gem 'pg'
-# gem 'rails_12factor', group: :production
+gem 'pg'
+gem 'rails_12factor', group: :production
