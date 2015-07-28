@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require fancybox
 //= require bootstrap-sprockets
+//= require ./modernizr.js
 //= require ./main.js

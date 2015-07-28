@@ -15,4 +15,5 @@
 //= require bootstrap-sprockets
 //= require bootsy
 //= require cocoon
+//= require ./modernizr.js
 //= require ./admin-main.js
