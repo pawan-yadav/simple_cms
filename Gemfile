@@ -33,10 +33,7 @@ gem "cocoon", "1.2.6"
 gem 'puma', "2.12.2"
 gem 'foreman', "0.78.0"
 gem 'sitemap_generator', '5.1.0'
-
-# Additional Gems
-gem 'fancybox2-rails', '0.2.8'
-
+gem 'exception_notification', '4.1.1'
 
 # Gems for Heroku
 # ----------------------------------------------

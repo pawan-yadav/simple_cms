@@ -77,5 +77,15 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'yourwebsite.com' }
+  config.action_mailer.default_url_options = { host: 'www.yourwebsite.com' }
+
+  SimpleCms::Application.config.middleware.use ExceptionNotification::Rack,
+  :email => {
+    :email_prefix => "[Error] ",
+    :sender_address => %{"notifier" <notifier@yourwebsite.com>},
+    :exception_recipients => %w{admin@yourwebsite.com}
+  }
+
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
 end
