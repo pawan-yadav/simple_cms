@@ -5,7 +5,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-	  <title>Saucedo Brothers <%= @page ? "| #{@page.name}" : '' %></title>
+	  <title>Simple CMS <%= @page ? "| #{@page.name}" : '' %></title>
 	  <%= stylesheet_link_tag    'application', media: 'all' %>
 	  <%= javascript_include_tag 'application' %>
 	  <%= csrf_meta_tags %>
@@ -21,136 +21,6 @@
 
 			<%= yield %>
 		</div>
-
-		<% if @page && @page.id == 1 %>
-			<div class="exciting_text">
-				<div class="container">
-					<div class="well well-lg">
-						<h1>Your Trusted El Paso Locksmith since 1917</h1>
-						<p>Saucedo Brothers is your source for Locksmith services in El Paso, Texas. We have the experience and drive to tackle any lock, key, door, commercial or residential service. We sell and work on safes, hardware and a full range of security devices. We have been keeping El Paso safe for two generations.</p>
-
-						<br />
-						<%= link_to('Learn more about our history', '/about', :title => 'About El Paso Locksmith', :class => 'link') %>
-					</div>
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="row blasts">
-			    <div class="col-md-3 col-sm-6">
-			      <div class="blast">
-			        <i class="fa fa-key"></i>
-			        <h2>Locksmith Services</h2>
-			        <p>We are your best solution for residential, commercial and industrial locksmith services. We offer a wide range of locks, keys and safes for your security needs.</p>
-			      </div>
-			    </div>
-			    <div class="col-md-3 col-sm-6">
-			      <div class="blast">
-			        <i class="fa fa-video-camera"></i>
-			        <h2>Security Services</h2>
-			        <p>Whether it's a custom alarm system or a simple entry system, we are your solution for security devices and services. We have your back.</p>
-			      </div>
-			    </div>
-			    <div class="col-md-3 col-sm-6">
-			      <div class="blast">
-			        <i class="fa fa-truck"></i>
-			        <h2>Service to Your Door</h2>
-			        <p>Need us to come to you? No problem; we are conveniently located in just outside of downtown El Paso, Texas. We can come to your home, business or vehicle.</p>
-			      </div>
-			    </div>
-			    <div class="col-md-3 col-sm-6">
-			      <div class="blast">
-			       <i class="fa fa-shield"></i>
-			        <h2>Locksmith Products</h2>
-			        <p>We carry everything from electronic locks to traditional hardware. Chances are if we don't carry the brand you are looking for, we can get it.</p>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="main_button">
-			    <a href="/services" title="EL Paso Locksmith Key Services" class="btn btn-default btn-lg">See All The Services</a>
-			  </div>
-			</div>
-
-			<div class="home_bottom">
-			  <div class="container">
-			    <div class="row">
-		        <div class="col-md-5">
-	            <h2>Service</h2>
-	            <p>We offer a wide range of locksmith services to the El Paso, Texas area. We have been in business, as a continuing enterprise for almost 70 years, and have accumulated the skills to tackle just about any job. We can make key copies, re-key locks, open locks, install doors and service hardware. We also sell safes, locks, keys, security devices, entry devices and more. We are your full service locksmith solution for El Paso, Texas.</p>
-	            <%= image_tag('grand.jpg', :class => 'img-responsive') %>
-		        </div>
-		        <div class="col-md-7">
-		          <%= simple_form_for @contact_form, :url => { :controller => 'pages', :action => 'create_contact_form' } do |f| %>
-								<%= f.input :name %>
-								<div class="row">
-									<div class="col-sm-6">
-										<%= f.input :phone_number %>
-									</div>
-									<div class="col-sm-6">
-										<%= f.input :email_address %>
-									</div>
-								</div>
-								<%= f.input :comments %>
-								<%= f.submit 'Submit', :class => 'btn btn-primary' %>
-							<% end %>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
-		<% end %>
-
-		<footer>
-			<div class="container">
-	      <div class="row">
-	      	<div class="col-sm-3">
-	      		<ul class="text-left">
-	      			<li>
-			      		<%= link_to 'facebook', '' %>
-			      	</li>
-			      	<li>
-			      		<%= link_to 'Twitter', '' %>
-			      	</li>
-			      	<li>
-			      		<%= link_to 'Instagram', '' %>
-			      	</li>
-			      </ul>
-	      	</div>
-	      	<div class="col-sm-3">
-	      		<ul class="text-left">
-	      			<li>
-			      		<%= link_to 'Home', '/', :title => 'El Paso Locksmith' %>
-			      	</li>
-			      	<li>
-			      		<%= link_to 'About', '/about', :title => 'About the Saucedo Brothers El Paso Locksmith' %>
-			      	</li>
-			      	<li>
-			      		<%= link_to 'Services', '/services', :title => 'El Paso Locksmith Services' %>
-			      	</li>
-			      	<li>
-			      		<%= link_to 'Contact', '/contact', :title => 'Contact a Locksmith in El Paso' %>
-			      	</li>
-			      </ul>
-	      	</div>
-	      	<div class="col-sm-6 col-md-4 text-right">
-	      		<div class="address">
-              <address>
-                1309 Texas Avenue<br />
-                El Paso Texas 79901
-              </address> 
-              <div class="phone_number">(915) 534-0008</div> 
-            </div>
-	      	</div>
-	      </div>
-	      <br />
-	      <br />
-	      <div class="row copyright">
-	        <div class="col-lg-12">
-	          <p>Copyright &copy; <%= Time.now.year %> Saucedo Brothers</p>
-	          <p>Website by <a href="http://www.ghostcake.com" title="El Paso Web Design and Software Development">GhostCake</a></p>
-	        </div>
-	      </div>
-	    </div>
-    </footer>
 
 	</body>
 </html>
