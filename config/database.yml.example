@@ -1,0 +1,36 @@
+# -------------------------------------------------------
+# Example PG setup.
+# -------------------------------------------------------
+# Uncomment the PG gem in the gemfile, bundle install and 
+# replace the contents of database.yml with something 
+# similar to what is shown here.
+# -------------------------------------------------------
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: ghostcake
+  pool: 5
+  username: machine
+  password: 
+  host: localhost
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: ghostcake
+  pool: 5
+  username: machine
+  password: 
+  host: localhost
+  port: 5432
+
+production:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: ghostcake
+  pool: 5
+  username: ghostcake
+  password: password
