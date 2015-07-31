@@ -72,6 +72,17 @@ RSpec is used for testing the application. To run the tests:
 bundle exec rspec
 ```
 
+
+## Heroku Deployment
+
+It's super simple to deploy to the Heroku platform. This quickstart list assumes that you have PG installed on your computer. It's easy to install PG with "Postgres.app":http://postgresapp.com/
+
+* Uncomment the gems under 'Gems for Heroku' line in the gemfile
+* Bundle install
+* Go to app on Heroku and add New Relic and Sendgrid
+* Follow integration instructions for New Relic and Sendgrid
+
+
 --------------------------------------------------------------------------------------
 
 The MIT License (MIT)
