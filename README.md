@@ -4,7 +4,7 @@ This is the quickest route to a typical Ruby on Rails website. Hit the ground ru
 
 ## Admin Section
 
---
+------------------------
 
 **Login url:**
 ```
@@ -20,7 +20,7 @@ password: password
 
 ## Default Pages
 
---
+------------------------
 
 *	Home
 * Blog
@@ -41,14 +41,14 @@ Almost every website needs a contact form, so we've included one by default. The
 
 ## Menu
 
---
+------------------------
 
 The menu is two level. Each menu item is associated with a page and can belong to another menu item. Child items will show up in a dropdown beneath the parent in the main menu nav.
 
 
 ## Getting Started
 
---
+------------------------
 
 These are the steps to getting Simple CMS running in a local environment. We are assuming that you have Ruby and Ruby on Rails installed.
 
