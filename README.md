@@ -42,7 +42,7 @@ Almost every website needs a contact form, so we've included one by default. The
 
 ## Additional Pages
 
-You can add, delete and sort as many pages as needed in the pages CMS section.
+You can add and delete as many pages as needed in the pages CMS section. Pages are listed in alphabetical order.
 
 
 ## Menu
