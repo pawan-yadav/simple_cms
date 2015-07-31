@@ -66,7 +66,12 @@ These are the steps to getting Simple CMS running in a local environment. We are
 
 ## SEO and Sitemap Settings
 
-Search engine optimization is important for small businesses. We have built in meta descriptions and tags for each page and an included sitemap generator for search engine submission.
+Search engine optimization is important for small businesses. We have built in meta descriptions and tags for each page and an included sitemap generator for search engine submission. To set the default meta description and meta tags edit 'app/models/page.rb'.
+
+```
+DEFAULT_DESCRIPTION = "Add a default description here."
+DEFAULT_KEYWORDS    = "Keywords,are,comma separated,like,this"
+```
 
 To generate a sitemap for your website you will have to edit '/sitemap.rb' to include the pages you would like indexed. Once you have added your structure, run the following command to generate the sitemap locally.
 
