@@ -8,3 +8,9 @@ This is the quickest route to a typical Ruby on Rails website. Hit the ground ru
 user: admin@example.com
 password: password
 ```
+
+### Default Pages
+
+*	Home
+* Blog
+* Contact
