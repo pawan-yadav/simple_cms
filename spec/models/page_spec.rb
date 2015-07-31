@@ -16,15 +16,25 @@ RSpec.describe Page, type: :model do
   	expect(example_page.slug).to eq('example-page')
   end
 
+
   it "can be created with validations" do
   	page = FactoryGirl.build(:page, name: 'Example Page')
 
     expect(page).to be_valid
   end
 
+
   it "ensures that empty name fails validation" do
   	page = FactoryGirl.build(:page, name: nil, slug: nil )
 
     expect(page).to be_invalid
+  end
+
+
+  it "ensures that name is unique" do
+    page_1 = FactoryGirl.create(:page)
+    page_2 = FactoryGirl.build(:page)
+
+    expect(page_2).to be_invalid
   end
 end
