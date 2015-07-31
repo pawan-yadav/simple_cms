@@ -6,7 +6,6 @@ This is the quickest route to a typical Ruby on Rails website. Hit the ground ru
 
 ## Admin Section
 
-
 **Login url:**
 ```
 http://localhost:3000/admin
@@ -21,6 +20,7 @@ password: password
 
 ## Default Pages
 
+You can add as many pages as you want but the system comes with three default pages. We find these are the typical pages in a small to medium sized website.
 
 *	Home
 * Blog
