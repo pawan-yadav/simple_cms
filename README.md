@@ -47,7 +47,7 @@ You can add and delete as many pages as needed in the pages CMS section. Pages a
 
 ## Menu
 
-The menu is two level. Each menu item is associated with a page and can belong to another menu item. Child items will show up in a dropdown beneath the parent in the main menu nav.
+The menu is two level. Each menu item is associated with a page and can belong to another menu item. Child items will show up in a dropdown beneath the parent in the main menu nav. Menu items can be added, deleted and sorted to create the optimal website navigation.
 
 
 ## Getting Started
