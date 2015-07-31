@@ -3,7 +3,7 @@
 This is the quickest route to a typical Ruby on Rails website. Hit the ground running with Pages, Blog Posts and Contact Forms.
 
 ## Admin Section
---
+-
 **Login url:**
 ```
 http://localhost:3000/admin
@@ -17,7 +17,7 @@ password: password
 ```
 
 ## Default Pages
---
+-
 *	Home
 * Blog
 * Contact
@@ -36,12 +36,12 @@ Simple CMS includes blog posts out of the box. Blog posts are associated with th
 Almost every website needs a contact form, so we've included one by default. The contact form is associated with the contact page.
 
 ## Menu
---
+-
 The menu is two level. Each menu item is associated with a page and can belong to another menu item. Child items will show up in a dropdown beneath the parent in the main menu nav.
 
 
 ## Getting Started
---
+-
 These are the steps to getting Simple CMS running in a local environment. We are assuming that you have Ruby and Ruby on Rails installed.
 
 * git clone https://github.com/Ghostcakedev/simple_cms.git 'your-website'
