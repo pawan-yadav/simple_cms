@@ -35,6 +35,19 @@ Almost every website needs a contact form, so we've included one by default. The
 
 The menu is two level. Each menu item is associated with a page and can belong to another menu item. Child items will show up in a dropdown beneath the parent in the main menu nav.
 
+
+### Getting Started
+
+These are the steps to getting Simple CMS running in a local environment. We are assuming that you have Ruby and Ruby on Rails installed.
+
+* git clone https://github.com/Ghostcakedev/simple_cms.git 'your-website'
+* cd your-website
+* Switch to the appropriate Ruby version and desired gemfile
+* run 'bundle install'
+* run 'rake db:migrate'
+* run 'foreman start'
+* Check output for assigned port and view in browser
+
 --------------------------------------------------------------------------------------
 
 The MIT License (MIT)
