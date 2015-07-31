@@ -1,8 +1,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* Variable Breakpoint */
 @mixin respond-to($breakpoint) {
   @media only screen and (min-width: $breakpoint + px) { @content; }
 }
 
-$dark: #13293d;
+/* Variables */
+$max-page-size: 1200px;
+
+
+/* Colors */
+$light: #eee;
+
+
+body {
+	
+}
+
+
+.main_wrapper {
+	max-width: $max-page-size;
+	margin:0 auto;
+}
+
+.navbar {
+	background: $light;
+	border-radius: 0px;
+	border: 0px;
+	.container-fluid {
+		max-width: $max-page-size;
+		margin:0 auto;
+	}
+}
