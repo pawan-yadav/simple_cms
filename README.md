@@ -4,13 +4,13 @@ This is the quickest route to a typical Ruby on Rails website. Hit the ground ru
 
 ### Admin Section
 
-Login url:
+**Login url:**
 ```
 http://localhost:3000/admin
 ```
 
 
-Default Credentials:
+**Default Credentials:**
 ```
 user: admin@example.com
 password: password
@@ -22,12 +22,16 @@ password: password
 * Blog
 * Contact
 
-### Blog
+**Home**
+
+The default page that the Rails root is mapped to.
+
+**Blog**
 
 Simple CMS includes blog posts out of the box. Blog posts are associated with the blog page.
 
 
-### Contact
+**Contact**
 
 Almost every website needs a contact form, so we've included one by default. The contact form is associated with the contact page.
 
