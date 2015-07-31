@@ -64,6 +64,16 @@ These are the steps to getting Simple CMS running in a local environment. We are
 * Check output for assigned port and view in browser
 
 
+## SEO and Sitemap Settings
+
+Search engine optimization is important for small businesses. We have built in meta descriptions and tags for each page and an included sitemap generator for search engine submission.
+
+To generate a sitemap for your website you will have to edit '/sitemap.rb' to include the pages you would like indexed. Once you have added your structure, run the following command to generate the sitemap locally.
+
+```
+ruby sitemap.rb
+```
+
 ## Testing
 
 RSpec is used for testing the application. To run the tests:
