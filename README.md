@@ -63,6 +63,15 @@ These are the steps to getting Simple CMS running in a local environment. We are
 * run 'foreman start'
 * Check output for assigned port and view in browser
 
+
+## Testing
+
+RSpec is used for testing the application. To run the tests:
+
+```
+bundle exec rspec
+```
+
 --------------------------------------------------------------------------------------
 
 The MIT License (MIT)
