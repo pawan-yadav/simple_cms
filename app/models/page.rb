@@ -35,7 +35,7 @@ class Page < ActiveRecord::Base
 	# -----------------------------------------------------
 	# CMS Form Options
 	# -----------------------------------------------------
-  SHOW_KEYWORDS_INPUT     	= :true
+  SHOW_SEO_OPTIONS     	    = :true
   SHOW_DESCRIPTION_INPUT  	= :true
   SHOW_IMAGE_UPLOAD       	= :true
   SHOW_BANNER_IMAGE_UPLOAD  = :true

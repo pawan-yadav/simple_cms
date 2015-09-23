@@ -6,14 +6,7 @@
 	<% end %>
 	<%= f.input :photo %>
 	<br />
-	<div class="row">
-		<div class="col-sm-6">
-			<%= f.input :headline %>
-		</div>
-		<div class="col-sm-6">
-			<%= f.input :caption %>
-		</div>
-	</div>
+	<%= f.input :caption %>
 	<div class="text-right">
 		<%= link_to_remove_association "Delete Image", f %>
 	</div>

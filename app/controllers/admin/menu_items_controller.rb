@@ -1,6 +1,6 @@
 module Admin
 	class MenuItemsController < AdminController
-		before_filter :authenticate_user!
+		before_action :validate_user
 
 		def index
 			set_menu_items
@@ -80,6 +80,13 @@ module Admin
 			def set_menu_items
 				@menu_items = MenuItem.where(:menu_item_id => nil).order('position ASC')
 			end
+
+			def validate_user
+	    	unless User::CAN_ACCESS_MENUS == :true || current_user.id == 1
+	    		flash[:alert] = "You do not have access."
+	    		redirect_to '/admin'
+	    	end
+	    end
 
 			def menu_item_params
 	    	params.require(:menu_item).permit(

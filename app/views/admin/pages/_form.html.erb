@@ -4,34 +4,39 @@
 
 <hr />
 
-<h3>Banner Images</h3>
-<br />
-<%= form.simple_fields_for :banner_images do |image| %>
-  <%= render 'image_fields', f: image %>
-<% end %>
-<div class="links">
-  <%= link_to_add_association 'Add Banner Image', form, :banner_images, :class => 'btn btn-primary' %>
-</div>
-
-<hr />
-
-<h3>Images</h3>
-<br />
-<%= form.simple_fields_for :images do |image| %>
-  <%= render 'image_fields', f: image %>
-<% end %>
-<div class="links">
-  <%= link_to_add_association 'Add Image', form, :images, :class => 'btn btn-primary' %>
-</div>
-
-<hr />
-<h3>SEO</h3>
-<div class="row">
-	<div class="col-sm-6">
-		<%= form.input :description %>
+<% if Page::SHOW_BANNER_IMAGE_UPLOAD == :true %>
+	<h3>Banner Images</h3>
+	<br />
+	<%= form.simple_fields_for :banner_images do |image| %>
+	  <%= render 'image_fields', f: image %>
+	<% end %>
+	<div class="links">
+	  <%= link_to_add_association 'Add Banner Image', form, :banner_images, :class => 'btn btn-primary' %>
 	</div>
-	<div class="col-sm-6">
-		<%= form.input :keywords, hint: 'Format: keyword,keyword,keyword' %>
+	<hr />
+<% end %>
+
+<% if Page::SHOW_IMAGE_UPLOAD == :true %>
+	<h3>Images</h3>
+	<br />
+	<%= form.simple_fields_for :images do |image| %>
+	  <%= render 'image_fields', f: image %>
+	<% end %>
+	<div class="links">
+	  <%= link_to_add_association 'Add Image', form, :images, :class => 'btn btn-primary' %>
 	</div>
-</div>
-<hr />
+	<hr />
+<% end %>
+
+<% if Page::SHOW_SEO_OPTIONS == :true %>
+	<h3>SEO Options</h3>
+	<div class="row">
+		<div class="col-sm-6">
+			<%= form.input :description %>
+		</div>
+		<div class="col-sm-6">
+			<%= form.input :keywords, hint: 'Format: keyword,keyword,keyword' %>
+		</div>
+	</div>
+	<hr />
+<% end %>

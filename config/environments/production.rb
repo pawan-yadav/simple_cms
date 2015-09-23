@@ -77,8 +77,25 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # Update with your domain name so we can address things properly
   config.action_mailer.default_url_options = { host: 'www.yourwebsite.com' }
 
+  # ---------------------------------------
+  # Enable if using Sendgrid for email support
+  # ---------------------------------------
+  # ActionMailer::Base.smtp_settings = {
+  #   :address        => 'smtp.sendgrid.net',
+  #   :port           => '587',
+  #   :authentication => :plain,
+  #   :user_name      => 'replace-me',
+  #   :password       => 'replace-me',
+  #   :domain         => 'heroku.com',
+  #   :enable_starttls_auto => true
+  # }
+
+  # ---------------------------------------
+  # Get notified when there is an error on your site
+  # ---------------------------------------
   SimpleCms::Application.config.middleware.use ExceptionNotification::Rack,
   :email => {
     :email_prefix => "[Error] ",
@@ -88,4 +105,16 @@ Rails.application.configure do
 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
+
+  # ---------------------------------------
+  # Enable if using s3 for image support
+  # ---------------------------------------
+  # config.paperclip_defaults = {
+  #   :storage => :s3,
+  #   :s3_credentials => {
+  #     :bucket => 'bucket-name-here',
+  #     :access_key_id => 'replace-me',
+  #     :secret_access_key => 'replace-me'
+  #   }
+  # }
 end

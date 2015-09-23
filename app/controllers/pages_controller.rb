@@ -1,12 +1,16 @@
 class PagesController < ApplicationController
 	def show
 		@page = Page.friendly.find(params[:id])
+		@banner_images = BannerImage.where(page_id: @page.id).order('id ASC')
+		@images = Image.where(page_id: @page.id).order('id ASC')
 		@posts = @page.posts.order('date DESC')
 		@contact_form = ContactForm.new
 	end
 
 	def create_contact_form
 		@page = Page.find(3)
+		@banner_images = BannerImage.where(page_id: @page.id).order('id ASC')
+		@images = Image.where(page_id: @page.id).order('id ASC')
 		@posts = @page.posts.order('date DESC')
 		@contact_form = ContactForm.new(contact_form_params)
 

@@ -3,6 +3,7 @@ module Admin
   	before_filter :authenticate_user!
 
 	  before_action :set_user, only: [:show, :edit, :update]
+	  before_action :validate_user
 
 
 	  def index
@@ -65,6 +66,13 @@ module Admin
 
 	    def set_user
 	      @user = User.find(params[:id])
+	    end
+
+	    def validate_user
+	    	unless User::CAN_ACCESS_USERS == :true || current_user.id == 1
+	    		flash[:alert] = "You do not have access."
+	    		redirect_to '/admin'
+	    	end
 	    end
 
 	    def user_params

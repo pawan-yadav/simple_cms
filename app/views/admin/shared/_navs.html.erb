@@ -33,21 +33,31 @@
             <li class="<%= params[:controller] == 'admin/admin' ? 'active' : '' %>">
                 <a href="/admin"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
-            <li class="<%= params[:controller] == 'admin/users' ? 'active' : '' %>">
-                <a href="/admin/users"><i class="fa fa-users"></i> Users</a>
-            </li>
-            <li class="<%= params[:controller] == 'admin/menu_items' ? 'active' : '' %>">
-                <a href="/admin/menu_items"><i class="fa fa-bars"></i> Menu</a>
-            </li>
-            <li class="<%= params[:controller] == 'admin/pages' ? 'active' : '' %>">
-                <a href="/admin/pages"><i class="fa fa-fw fa-file"></i> Pages</a>
-            </li>
-            <li class="<%= params[:controller] == 'admin/blog_posts' ? 'active' : '' %>">
-                <a href="/admin/blog_posts"><i class="fa fa-book"></i> Blog Posts</a>
-            </li>
-            <li class="<%= params[:controller] == 'admin/contact_forms' ? 'active' : '' %>">
-                <a href="/admin/contact_forms"><i class="fa fa-envelope"></i> Contact Forms</a>
-            </li>
+            <% if User::CAN_ACCESS_USERS == :true || current_user.id == 1 %>
+              <li class="<%= params[:controller] == 'admin/users' ? 'active' : '' %>">
+                  <a href="/admin/users"><i class="fa fa-users"></i> Users</a>
+              </li>
+            <% end %>
+            <% if User::CAN_ACCESS_MENUS == :true || current_user.id == 1 %>
+              <li class="<%= params[:controller] == 'admin/menu_items' ? 'active' : '' %>">
+                  <a href="/admin/menu_items"><i class="fa fa-bars"></i> Menu</a>
+              </li>
+            <% end %>
+            <% if User::CAN_ACCESS_PAGES == :true || current_user.id == 1 %>
+              <li class="<%= params[:controller] == 'admin/pages' ? 'active' : '' %>">
+                  <a href="/admin/pages"><i class="fa fa-fw fa-file"></i> Pages</a>
+              </li>
+            <% end %>
+            <% if User::CAN_ACCESS_BLOG_POSTS == :true || current_user.id == 1 %>
+              <li class="<%= params[:controller] == 'admin/blog_posts' ? 'active' : '' %>">
+                  <a href="/admin/blog_posts"><i class="fa fa-book"></i> Blog Posts</a>
+              </li>
+            <% end %>
+            <% if User::CAN_ACCESS_CONTACT_FORMS == :true || current_user.id == 1 %>
+              <li class="<%= params[:controller] == 'admin/contact_forms' ? 'active' : '' %>">
+                  <a href="/admin/contact_forms"><i class="fa fa-envelope"></i> Contact Forms</a>
+              </li>
+            <% end %>
         </ul>
     </div>
 </nav>
