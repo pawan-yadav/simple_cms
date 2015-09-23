@@ -60,7 +60,7 @@ module Admin
 		end
 
 		def validate_user
-    	unless User::CAN_ACCESS_PAGES == :true || current_user.id == 1
+    	unless User::CAN_ACCESS_PAGES == 'true' || current_user.id == 1
     		flash[:alert] = "You do not have access."
     		redirect_to '/admin'
     	end

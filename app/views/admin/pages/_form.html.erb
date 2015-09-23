@@ -4,7 +4,7 @@
 
 <hr />
 
-<% if Page::SHOW_BANNER_IMAGE_UPLOAD == :true %>
+<% if Page::SHOW_BANNER_IMAGE_UPLOAD == 'true' || current_user.id == 1 %>
 	<h3>Banner Images</h3>
 	<br />
 	<%= form.simple_fields_for :banner_images do |image| %>
@@ -16,7 +16,7 @@
 	<hr />
 <% end %>
 
-<% if Page::SHOW_IMAGE_UPLOAD == :true %>
+<% if Page::SHOW_IMAGE_UPLOAD == 'true' || current_user.id == 1 %>
 	<h3>Images</h3>
 	<br />
 	<%= form.simple_fields_for :images do |image| %>
@@ -28,7 +28,7 @@
 	<hr />
 <% end %>
 
-<% if Page::SHOW_SEO_OPTIONS == :true %>
+<% if Page::SHOW_SEO_OPTIONS == 'true' || current_user.id == 1 %>
 	<h3>SEO Options</h3>
 	<div class="row">
 		<div class="col-sm-6">

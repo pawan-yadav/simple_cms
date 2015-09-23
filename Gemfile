@@ -34,6 +34,7 @@ group :development, :test do
   gem 'spring', '1.3.6'
   gem 'rspec-rails', "3.3.3"
   gem 'factory_girl_rails', "4.5.0"
+  gem 'faker'
   gem 'database_cleaner', "1.4.1"
   gem 'foreman', "0.78.0"
 end

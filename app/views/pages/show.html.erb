@@ -1,5 +1,5 @@
 <!-- Page Banner Images -->
-<% if @banner_images.count > 0 && Page::SHOW_BANNER_IMAGES == :true %>
+<% if @banner_images.count > 0 && Page::SHOW_BANNER_IMAGES == 'true' %>
 	<div class="banner_images">
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
@@ -38,7 +38,7 @@
 
 
 <!-- Page Images -->
-<% if @images.count > 0 && Page::SHOW_IMAGES == :true %>
+<% if @images.count > 0 && Page::SHOW_IMAGES == 'true' %>
 	<div class="page_images">
 		<% for row in @images.in_groups_of(4) %>
       <div class="row">

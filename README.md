@@ -8,7 +8,7 @@ This is the quickest route to a typical Ruby on Rails website. Hit the ground ru
 
 **Login url:**
 ```
-http://localhost:3000/admin
+http://localhost:5000/admin
 ```
 
 
@@ -63,6 +63,9 @@ These are the steps to getting Simple CMS running in a local environment. We are
 * run 'foreman start'
 * Check output for assigned port and view in browser
 
+## Configuration Options
+
+The User and Page model files have configuration options for things like CMS section access and front end display.
 
 ## SEO and Sitemap Settings
 
@@ -86,17 +89,6 @@ RSpec is used for testing the application. To run the tests:
 ```
 bundle exec rspec
 ```
-
-
-## Heroku Deployment
-
-It's super simple to deploy to the Heroku platform. This quickstart list assumes that you have PG installed on your computer. It's easy to install PG with "Postgres.app":http://postgresapp.com/
-
-* Uncomment the gems under 'Gems for Heroku' line in the gemfile
-* Bundle install
-* Go to app on Heroku and add New Relic and Sendgrid
-* Follow integration instructions for New Relic and Sendgrid
-
 
 --------------------------------------------------------------------------------------
 

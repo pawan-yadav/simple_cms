@@ -28,17 +28,17 @@ class Page < ActiveRecord::Base
 	# -----------------------------------------------------
 	# View Options
 	# -----------------------------------------------------
-	SHOW_PAGE_TITLES	 = :false
-  SHOW_BANNER_IMAGES = :true
-  SHOW_IMAGES        = :true
+	SHOW_PAGE_TITLES	 = 'true'
+  SHOW_BANNER_IMAGES = 'true'
+  SHOW_IMAGES        = 'true'
 
 	# -----------------------------------------------------
 	# CMS Form Options
 	# -----------------------------------------------------
-  SHOW_SEO_OPTIONS     	    = :true
-  SHOW_DESCRIPTION_INPUT  	= :true
-  SHOW_IMAGE_UPLOAD       	= :true
-  SHOW_BANNER_IMAGE_UPLOAD  = :true
+  SHOW_SEO_OPTIONS     	    = 'true'
+  SHOW_DESCRIPTION_INPUT  	= 'true'
+  SHOW_IMAGE_UPLOAD       	= 'true'
+  SHOW_BANNER_IMAGE_UPLOAD  = 'true'
 
   # -----------------------------------------------------
   # Page Ordering Options
