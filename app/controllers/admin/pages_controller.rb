@@ -66,7 +66,9 @@ module Admin
     		:keywords,
     		:body,
     		:bootsy_image_gallery_id,
-    		posts_attributes: [:id, :name, :description, :keywords, :done, :body, :_destroy]
+    		posts_attributes: [:id, :name, :description, :keywords, :done, :body, :_destroy],
+    		images_attributes: [:id, :photo, :headline, :caption, :done, :_destroy],
+    		banner_images_attributes: [:id, :photo, :headline, :caption, :done, :_destroy]
     	)
   	end
 	end

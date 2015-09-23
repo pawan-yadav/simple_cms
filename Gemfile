@@ -49,6 +49,7 @@ gem 'friendly_id', '5.1.0'
 # --------------------------------------------------
 gem 'bootstrap-sass', '3.3.5.1'
 gem "font-awesome-rails", '4.3.0.0'
+gem 'fancybox2-rails', '0.2.8'
 
 # --------------------------------------------------
 # Web Server

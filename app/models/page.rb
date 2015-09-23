@@ -5,9 +5,14 @@ class Page < ActiveRecord::Base
 		friendly_id :name, use: :slugged
 
 	has_many :posts, dependent: :destroy
-	has_many :photos, dependent: :destroy
+	has_many :images, dependent: :destroy
+	has_many :banner_images, dependent: :destroy
 	has_many :menu_items, dependent: :destroy
+
+	# Cocoon Helpers
 	accepts_nested_attributes_for :posts, :reject_if => :all_blank, :allow_destroy => true
+	accepts_nested_attributes_for :images, :reject_if => :all_blank, :allow_destroy => true
+	accepts_nested_attributes_for :banner_images, :reject_if => :all_blank, :allow_destroy => true
 
 	validates :name, :presence => true, :uniqueness => true
 
