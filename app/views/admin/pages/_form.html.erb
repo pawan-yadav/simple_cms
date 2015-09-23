@@ -8,7 +8,7 @@
 	<h3>Banner Images</h3>
 	<br />
 	<%= form.simple_fields_for :banner_images do |image| %>
-	  <%= render 'image_fields', f: image %>
+	  <%= render 'banner_image_fields', f: image %>
 	<% end %>
 	<div class="links">
 	  <%= link_to_add_association 'Add Banner Image', form, :banner_images, :class => 'btn btn-primary' %>
