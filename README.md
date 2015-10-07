@@ -67,6 +67,33 @@ These are the steps to getting Simple CMS running in a local environment. We are
 
 The User and Page model files have configuration options for things like CMS section access and front end display.
 
+###User Model
+
+```
+CAN_ACCESS_USERS					= 'true'
+CAN_ACCESS_MENUS					= 'true'
+CAN_ACCESS_BLOG_POSTS			= 'true'
+CAN_ACCESS_PAGES					= 'true'
+CAN_ACCESS_CONTACT_FORMS	= 'true'
+```
+
+###Page Model
+
+```
+DASHBOARD_MESSAGE         = "Welcome to Simple CMS."
+DEFAULT_DESCRIPTION       = ""
+DEFAULT_KEYWORDS          = ""
+SHOW_PAGE_TITLES	        = 'true'
+SHOW_BANNER_IMAGES        = 'true'
+SHOW_IMAGES               = 'true'
+SHOW_SEO_OPTIONS     	    = 'true'
+SHOW_DESCRIPTION_INPUT  	= 'true'
+SHOW_IMAGE_UPLOAD       	= 'true'
+SHOW_BANNER_IMAGE_UPLOAD  = 'true'
+SORT_BY                   = "name"
+SORT_ORDER                = "ASC"
+```
+
 ## SEO and Sitemap Settings
 
 Search engine optimization is important for small businesses. We have built in meta descriptions and tags for each page and an included sitemap generator for search engine submission. To set the default meta description and meta tags edit 'app/models/page.rb'.
