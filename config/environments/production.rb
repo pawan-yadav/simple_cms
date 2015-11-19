@@ -82,6 +82,7 @@ Rails.application.configure do
 
   # ---------------------------------------
   # Enable if using Sendgrid for email support
+  #  (Not activated for demo)
   # ---------------------------------------
   # ActionMailer::Base.smtp_settings = {
   #   :address        => 'smtp.sendgrid.net',
@@ -95,6 +96,7 @@ Rails.application.configure do
 
   # ---------------------------------------
   # Get notified when there is an error on your site
+  #  (Not activated for demo)
   # ---------------------------------------
   SimpleCms::Application.config.middleware.use ExceptionNotification::Rack,
   :email => {
@@ -109,12 +111,12 @@ Rails.application.configure do
   # ---------------------------------------
   # Enable if using s3 for image support
   # ---------------------------------------
-  # config.paperclip_defaults = {
-  #   :storage => :s3,
-  #   :s3_credentials => {
-  #     :bucket => 'bucket-name-here',
-  #     :access_key_id => 'replace-me',
-  #     :secret_access_key => 'replace-me'
-  #   }
-  # }
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV["S3_BUCKET_NAME"],
+      :access_key_id => ENV["S3_ACCESS_KEY"],
+      :secret_access_key => ENV["S3_SECRET_KEY"]
+    }
+  }
 end

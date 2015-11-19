@@ -85,5 +85,5 @@ gem 'exception_notification', '4.1.1'
 # --------------------------------------------------
 # Gems For Heroku
 # --------------------------------------------------
-# gem 'rails_12factor', group: :production
-# gem 'aws-sdk', "1.64.0"
+gem 'rails_12factor', group: :production
+gem 'aws-sdk', "1.64.0"
