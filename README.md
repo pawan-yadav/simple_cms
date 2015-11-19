@@ -4,6 +4,12 @@
 
 This is the quickest route to a typical Ruby on Rails website. Hit the ground running with Pages, Blog Posts and Contact Forms.
 
+**Demo url:**
+```
+cms-demo.ghostcake.com
+```
+
+
 ## Admin Section
 
 **Login url:**
