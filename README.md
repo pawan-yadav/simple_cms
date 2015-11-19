@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/Ghostcakedev/simple_cms.svg?branch=master)](https://travis-ci.org/Ghostcakedev/simple_cms)
 
+# Demo Repo. Currently based off of version 0.2 pre-release
+
 # Simple CMS
 
 This is the quickest route to a typical Ruby on Rails website. Hit the ground running with Pages, Blog Posts and Contact Forms.
