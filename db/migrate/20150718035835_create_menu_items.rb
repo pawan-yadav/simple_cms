@@ -7,5 +7,9 @@ class CreateMenuItems < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    MenuItem.create page_id: 1, position: 1
+    MenuItem.create page_id: 2, position: 2
+    MenuItem.create page_id: 3, position: 3
   end
 end

@@ -1,0 +1,13 @@
+<div class="nested-fields">
+	<% unless f.object.photo.blank? %>
+		<div class="image_preview">
+			<%= image_tag(f.object.photo.url(:thumb)) %>
+		</div>
+	<% end %>
+	<%= f.input :photo %>
+	<br />
+	<%= f.input :caption %>
+	<div class="text-right">
+		<%= link_to_remove_association "Delete Image", f %>
+	</div>
+</div>

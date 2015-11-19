@@ -61,6 +61,25 @@
 	<% for post in @posts %>
 		<h2><%= post.name %> <small><%= display_date post.date %></small></h2>
 		<%= post.body.html_safe %>
+
+		<!-- Page Images -->
+		<% if post.images.count > 0 && Post::SHOW_IMAGES == 'true' %>
+			<div class="page_images">
+				<% for row in post.images.in_groups_of(4) %>
+		      <div class="row">
+		        <% for image in row %>
+		          <% unless image.blank? %>
+		            <div class="col-sm-3">
+		              <%= link_to image_url(image.photo), :class => 'fancybox', :rel => 'group', :title => image.caption do %>
+		                <%= image_tag(image.photo.url(:medium), :class => 'img-responsive img-thumbnail') %>
+		              <% end %>
+		            </div>
+		          <% end %>
+		        <% end %>
+		      </div>
+		    <% end %>
+			</div>
+		<% end %>
 	<% end %>
 <% end %>
 

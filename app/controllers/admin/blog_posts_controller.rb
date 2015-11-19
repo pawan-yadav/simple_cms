@@ -70,7 +70,8 @@ module Admin
     		:description,
     		:keywords,
     		:body,
-    		:bootsy_image_gallery_id
+    		:bootsy_image_gallery_id,
+    		images_attributes: [:id, :photo, :headline, :caption, :done, :_destroy]
     	)
   	end
 	end

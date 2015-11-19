@@ -1,9 +1,22 @@
 <%= form.input :name %>
-<%= form.input :date %>
+<%= form.input :date, as: :string, input_html: { class: 'datepicker' } %>
 
 <%= form.bootsy_area :body %>
 
 <hr />
+
+<% if Post::SHOW_IMAGE_UPLOAD == 'true' || current_user.id == 1 %>
+	<h3>Images</h3>
+	<br />
+	<%= form.simple_fields_for :images do |image| %>
+	  <%= render 'image_fields', f: image %>
+	<% end %>
+	<div class="links">
+	  <%= link_to_add_association 'Add Image', form, :images, :class => 'btn btn-default' %>
+	</div>
+	<hr />
+<% end %>
+
 <!-- <h3>SEO</h3>
 <div class="row">
 	<div class="col-sm-6">

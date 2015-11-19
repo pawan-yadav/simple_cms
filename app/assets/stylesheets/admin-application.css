@@ -13,5 +13,6 @@
 *= require_self
 *= require bootsy
 *= require font-awesome
+*= require bootstrap-datepicker3
 *= require ./admin-main.css.scss
 */
