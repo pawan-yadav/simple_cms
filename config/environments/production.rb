@@ -111,6 +111,7 @@ Rails.application.configure do
   # ---------------------------------------
   # Enable if using s3 for image support
   # ---------------------------------------
+  Paperclip::Attachment.default_options[:s3_host_name] = 's3-us-west-1.amazonaws.com'
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
