@@ -2,6 +2,8 @@
 
 # Demo Repo. Currently based off of version 0.2 pre-release
 
+The database is reset every hour and any test data uploaded will be wiped out.
+
 # Simple CMS
 
 This is the quickest route to a typical Ruby on Rails website. Hit the ground running with Pages, Blog Posts and Contact Forms.
