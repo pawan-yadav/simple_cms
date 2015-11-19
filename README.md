@@ -7,6 +7,8 @@ This is the quickest route to a typical Ruby on Rails website. Hit the ground ru
 **Demo url:**
 ```
 cms-demo.ghostcake.com
+
+note: database is reset every hour. If you get an error, try again in a moment. Also, all demo users are using the same credentials so there may a conflict while editing data every once and a while.
 ```
 
 
