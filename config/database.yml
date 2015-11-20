@@ -11,7 +11,8 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: ghostcake
+  database: ghostcake_test
+  username: postgres
 
 production:
   host: localhost
