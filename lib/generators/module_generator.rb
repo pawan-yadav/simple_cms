@@ -32,7 +32,7 @@ end
   end
 
   def create_image_migrations
-  	create_file "db/migrate/#{Time.now.year}#{Time.now.to_i}_add_fields.rb", <<-FILE
+  	create_file "db/migrate/#{Time.now.year}#{Time.now.to_i}2_add_fields.rb", <<-FILE
 class AddFields < ActiveRecord::Migration
   def change
   	add_column :banner_images, :#{plural_name.singularize}_id, :integer
@@ -102,7 +102,7 @@ end
 	def create_nav_links
 		inject_into_file 'app/views/admin/shared/_navs.html.erb', after: "<!-- #insert here -->\n" do
 				"						<% if User::CAN_ACCESS_#{plural_name.upcase} == 'true' || current_user.id == 1 %>
-				  		<li class='<%= params[:controller] == 'admin/<%= plural_name %>' ? 'active' : '' %>'>
+				  		<li class='<%= params[:controller] == 'admin/#{plural_name}' ? 'active' : '' %>'>
 				      	<a href='/admin/#{plural_name}'><i class='fa fa-fw fa-file'></i> #{plural_name.capitalize}</a>
 				  		</li>
 						<% end %>\n"
