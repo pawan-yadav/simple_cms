@@ -19,7 +19,7 @@ module Admin
     def create
       @user = User.new(
         email: params[:user][:email],
-        passwor: params[:user][:password],
+        password: params[:user][:password],
         password_confirmation: params[:user][:password_confirmation]
       )
 
