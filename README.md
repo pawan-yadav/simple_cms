@@ -145,6 +145,23 @@ Tests can also be run through Guard
 bundle exec guard
 ```
 
+## Contributing
+
+* Fork it.
+* Create a branch (git checkout -b my_feature_branch)
+* Commit your changes (git commit -am "Added a sweet feature")
+* Push to the branch (git push origin branch-name)
+* Create a pull request with description from your branch into develop
+
+
+## Comments
+
+The project is an app, not a gem. I plan on keeping it that way. I like locking down gem versions to ensure a functional CMS on installations. I don't want to support multiple rubies or gem versions.
+
+
+## Roadmap
+
+The project is still in early development. The stable, production ready version will v1.0.
 
 --------------------------------------------------------------------------------------
 
