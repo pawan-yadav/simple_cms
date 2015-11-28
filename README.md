@@ -117,6 +117,19 @@ To generate a sitemap for your website you will have to edit '/sitemap.rb' to in
 ruby sitemap.rb
 ```
 
+## Module Generator
+
+Quickly add cms sections with the custom module generator:
+
+```
+rails generate module NAME [BANNER_IMAGES] [IMAGES] [options]
+
+Example:
+	rails generate ExampleModule true true
+```
+
+The above example will create a CMS section at /admin/example_modules. Each example module can have banner images and images.
+
 ## Testing
 
 RSpec is used for testing the application. To run the tests:
