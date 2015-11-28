@@ -138,6 +138,13 @@ RSpec is used for testing the application. To run the tests:
 bundle exec rspec
 ```
 
+Tests can also be run through Guard
+
+```
+bundle exec guard
+```
+
+
 --------------------------------------------------------------------------------------
 
 The MIT License (MIT)
