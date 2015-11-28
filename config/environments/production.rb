@@ -97,10 +97,10 @@ Rails.application.configure do
   # Get notified when there is an error on your site
   # ---------------------------------------
   SimpleCms::Application.config.middleware.use ExceptionNotification::Rack,
-  :email => {
-    :email_prefix => "[Error] ",
-    :sender_address => %{"notifier" <notifier@yourwebsite.com>},
-    :exception_recipients => %w{admin@yourwebsite.com}
+  email: {
+    email_prefix: '[Error] ',
+    sender_address: %{'notifier' <notifier@yourwebsite.com>},
+    exception_recipients: %w{admin@yourwebsite.com}
   }
 
   config.action_mailer.perform_deliveries = true

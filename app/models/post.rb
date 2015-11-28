@@ -1,22 +1,24 @@
+# Posts
 class Post < ActiveRecord::Base
-	include Bootsy::Container
-	
-	belongs_to :page
-	has_many :images, dependent: :destroy
+  include Bootsy::Container
 
-	validates_presence_of :name, :date
+  belongs_to :page
+  has_many :images, dependent: :destroy
 
-	accepts_nested_attributes_for :images, :reject_if => :all_blank, :allow_destroy => true
+  validates :name, presence: true
+  validates :date, presence: true
 
-	# Global Post Options !!
+  accepts_nested_attributes_for :images, reject_if: :all_blank, allow_destroy: true
 
-	# -----------------------------------------------------
-	# CMS Form Options
-	# -----------------------------------------------------
-	SHOW_IMAGE_UPLOAD   = 'true'
+  # Global Post Options !!
 
-	# -----------------------------------------------------
-	# View Options
-	# -----------------------------------------------------
+  # -----------------------------------------------------
+  # CMS Form Options
+  # -----------------------------------------------------
+  SHOW_IMAGE_UPLOAD = 'true'
+
+  # -----------------------------------------------------
+  # View Options
+  # -----------------------------------------------------
   SHOW_IMAGES = 'true'
 end

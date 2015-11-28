@@ -1,18 +1,18 @@
+# Banner Images
 class BannerImage < ActiveRecord::Base
-	# Stock associations
-	belongs_to :page
-	belongs_to :post
+  # Stock associations
+  belongs_to :page
+  belongs_to :post
 
-	# Associations added by module generator
-	# Do not remove or midify this comment.
-	# !!! Important !!!
-	# -- insert here --
+  # Associations added by module generator
+  # Do not remove or midify this comment.
+  # !!! Important !!!
+  # -- insert here --
 
+  validates :photo, presence: true
 
-
-
-	validates_presence_of :photo
-
-	has_attached_file :photo, styles: { banner: "1200x400#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
-  validates_attachment_content_type :photo, content_type: /\Aimage\/.*\Z/
+  has_attached_file :photo,
+                    styles: { banner: '1200x400#', thumb: '100x100>' },
+                    default_url: '/images/:style/missing.png'
+  validates_attachment_content_type :photo, content_type: %r{/\Aimage\/.*\Z/}
 end

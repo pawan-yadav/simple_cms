@@ -68,7 +68,7 @@ These are the steps to getting Simple CMS running in a local environment. We are
 * Switch to the appropriate Ruby version and desired gemfile
 * run 'bundle install'
 * run 'rake db:migrate'
-* run 'foreman start'
+* run 'bundle exec guard'
 * Check output for assigned port and view in browser
 
 ## Configuration Options

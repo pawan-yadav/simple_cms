@@ -1,53 +1,54 @@
 module Admin
-	class MenuItemsController < AdminController
-		before_action :validate_user
+  # All admin controllers inherit from Admin class
+  class MenuItemsController < AdminController
+    before_action :validate_user
 
-		def index
-			set_menu_items
-		end
+    def index
+      set_menu_items
+    end
 
-		def edit
-			set_menu_item
-		end
+    def edit
+      set_menu_item
+    end
 
-		def new
-			@menu_item = MenuItem.new
-		end
+    def new
+      @menu_item = MenuItem.new
+    end
 
-		def update
-			set_menu_item
+    def update
+      set_menu_item
 
-			if @menu_item.update(menu_item_params)
-				flash[:notice] = "Menu item has been updated."
-				redirect_to action: 'index'
-			else
-				render action: 'edit', id: @menu_item.id
-			end
-		end
+      if @menu_item.update(menu_item_params)
+        flash[:notice] = 'Menu item has been updated.'
+        redirect_to action: 'index'
+      else
+        render action: 'edit', id: @menu_item.id
+      end
+    end
 
-		def create
-			@menu_item = MenuItem.new(menu_item_params)
+    def create
+      @menu_item = MenuItem.new(menu_item_params)
 
-			if @menu_item.save
-				flash[:notice] = "Menu item was created."
-				redirect_to action: 'index'
-			else
-				render action: 'new'
-			end
-		end
+      if @menu_item.save
+        flash[:notice] = 'Menu item was created.'
+        redirect_to action: 'index'
+      else
+        render action: 'new'
+      end
+    end
 
-		def save
-			set_menu_item
-		end
+    def save
+      set_menu_item
+    end
 
-		def destroy
+    def destroy
       menu_item = MenuItem.find(params[:menu_item_id])
       menu_item.destroy
 
       redirect_to action: 'index'
     end
 
-		def move_up
+    def move_up
       menu_item = MenuItem.find(params[:menu_item_id])
       menu_item.move_higher
       menu_item.save
@@ -67,33 +68,33 @@ module Admin
       end
     end
 
-		private
-			def list_refresh
-        set_menu_items
-        return render(:file => 'admin/menu_items/list_refresh.js.erb')
-      end
+    private
 
-			def set_menu_item
-				@menu_item = MenuItem.find(params[:id])
-			end
+    def list_refresh
+      set_menu_items
+      render(file: 'admin/menu_items/list_refresh.js.erb')
+    end
 
-			def set_menu_items
-				@menu_items = MenuItem.where(:menu_item_id => nil).order('position ASC')
-			end
+    def set_menu_item
+      @menu_item = MenuItem.find(params[:id])
+    end
 
-			def validate_user
-	    	unless User::CAN_ACCESS_MENUS == 'true' || current_user.id == 1
-	    		flash[:alert] = "You do not have access."
-	    		redirect_to '/admin'
-	    	end
-	    end
+    def set_menu_items
+      @menu_items = MenuItem.where(menu_item_id: nil).order('position ASC')
+    end
 
-			def menu_item_params
-	    	params.require(:menu_item).permit(
-	    		:page_id,
-	    		:menu_item_id,
-	    		:position
-	    	)
-	  	end
-	end
+    def validate_user
+      return true if User::CAN_ACCESS_MENUS == 'true' || current_user.id == 1
+      flash[:alert] = 'You do not have access.'
+      redirect_to '/admin'
+    end
+
+    def menu_item_params
+      params.require(:menu_item).permit(
+        :page_id,
+        :menu_item_id,
+        :position
+      )
+    end
+  end
 end

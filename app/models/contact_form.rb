@@ -1,3 +1,5 @@
+# Contact Forms
 class ContactForm < ActiveRecord::Base
-	validates_presence_of :name, :comments
+  validates :name, presence: true
+  validates :comments, presence: true
 end

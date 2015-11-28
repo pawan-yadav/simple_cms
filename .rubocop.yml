@@ -1,0 +1,20 @@
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - '**/Guardfile'
+    - '**/Rakefile'
+    - '**/bin/**'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'lib/**/*'
+    - 'spec/support/factory_girl.rb'
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Max: 90
