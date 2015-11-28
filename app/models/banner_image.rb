@@ -1,6 +1,15 @@
 class BannerImage < ActiveRecord::Base
+	# Stock associations
 	belongs_to :page
 	belongs_to :post
+
+	# Associations added by module generator
+	# Do not remove or midify this comment.
+	# !!! Important !!!
+	# -- insert here --
+
+
+
 
 	validates_presence_of :photo
 

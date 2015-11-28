@@ -38,6 +38,13 @@ Rails.application.routes.draw do
         get 'destroy'
       end
     end
+
+    # Routes added by module generator
+    # Do not remove or midify this comment.
+    # !!! Important !!!
+    # -- insert here --
+
+    
   end
  	
 end
