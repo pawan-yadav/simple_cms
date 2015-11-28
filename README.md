@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.org/Ghostcakedev/simple_cms.svg?branch=master)](https://travis-ci.org/Ghostcakedev/simple_cms)
 [![Coverage Status](https://coveralls.io/repos/Ghostcakedev/simple_cms/badge.svg?branch=develop&service=github)](https://coveralls.io/github/Ghostcakedev/simple_cms?branch=develop)
 
-# Simple CMS
 ![Alt text](http://www.ghostcake.com/cms-logo.jpg "Ruby on Rails Content Management System")
 
 This is the quickest route to a typical Ruby on Rails website. Hit the ground running with Pages, Blog Posts and Contact Forms.
