@@ -89,6 +89,7 @@ gem 'sitemap_generator', '5.1.0'
 # --------------------------------------------------
 # gem 'newrelic_rpm'
 gem 'exception_notification', '4.1.1'
+gem 'coveralls', '0.8.9', require: false
 
 # --------------------------------------------------
 # Gems For Heroku
