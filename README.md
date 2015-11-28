@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Ghostcakedev/simple_cms.svg?branch=master)](https://travis-ci.org/Ghostcakedev/simple_cms)
-[![Coverage Status](https://coveralls.io/repos/ghostcakedev/simple_cms/badge.svg?branch=develop)](https://coveralls.io/r/ghostcakedev/simple_cms?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/Ghostcakedev/simple_cms/badge.svg?branch=develop&service=github)](https://coveralls.io/github/Ghostcakedev/simple_cms?branch=develop)
 
 # Simple CMS
 
