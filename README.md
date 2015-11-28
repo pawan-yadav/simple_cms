@@ -150,8 +150,8 @@ bundle exec guard
 ## Contributing
 
 * Fork it.
-* Create a branch (git checkout -b my_feature_branch)
-* Commit your changes (git commit -am "Added a sweet feature")
+* Create a branch (git checkout -b branch-name)
+* Commit your changes
 * Push to the branch (git push origin branch-name)
 * Create a pull request with description from your branch into develop
 
