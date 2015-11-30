@@ -9,6 +9,7 @@ AllCops:
     - 'script/**/*'
     - 'lib/**/*'
     - 'spec/support/factory_girl.rb'
+    - 'app/models/**/*'
 
 Metrics/LineLength:
   Max: 120
