@@ -1,4 +1,5 @@
 module Admin
+  # All admin controllers inherit admin class
   class <%= plural_name.camelize %>Controller < AdminController
     before_action :validate_user
 
@@ -18,7 +19,7 @@ module Admin
       set_<%= plural_name.singularize %>
 
       if @<%= plural_name.singularize %>.update(<%= plural_name.singularize %>_params)
-        flash[:notice] = "<%= plural_name.singularize.capitalize %> has been updated."
+        flash[:notice] = '<%= plural_name.singularize.capitalize %> has been updated.'
         redirect_to action: 'index'
       else
         render action: 'edit', id: @<%= plural_name.singularize %>.id
@@ -29,7 +30,7 @@ module Admin
       @<%= plural_name.singularize %> = <%= plural_name.singularize.camelize %>.new(<%= plural_name.singularize %>_params)
 
       if @<%= plural_name.singularize %>.save
-        flash[:notice] = "<%= plural_name.singularize.capitalize %> was created."
+        flash[:notice] = '<%= plural_name.singularize.capitalize %> was created.'
         redirect_to action: 'index'
       else
         render action: 'new'
@@ -44,7 +45,7 @@ module Admin
       <%= plural_name.singularize %> = <%= plural_name.singularize.camelize %>.find(params[:<%= plural_name.singularize %>_id])
 
       <%= plural_name.singularize %>.destroy
-      flash[:notice] = "<%= plural_name.singularize.capitalize %> was destroyed."
+      flash[:notice] = '<%= plural_name.singularize.capitalize %> was destroyed.'
 
       redirect_to action: 'index'
     end
@@ -56,16 +57,15 @@ module Admin
     end
 
     def validate_user
-      unless User::CAN_ACCESS_<%= plural_name.upcase %> == 'true' || current_user.id == 1
-        flash[:alert] = "You do not have access."
-        redirect_to '/admin'
-      end
+      return true if User::CAN_ACCESS_<%= plural_name.upcase %> == 'true' || current_user.id == 1
+      flash[:alert] = 'You do not have access.'
+      redirect_to '/admin'
     end
 
     def <%= plural_name.singularize %>_params
       params.require(:<%= plural_name.singularize %>).permit(
         :<%= plural_name.singularize %>_id,
-        :name, 
+        :name,
         :description,
         :keywords,
         :body,
