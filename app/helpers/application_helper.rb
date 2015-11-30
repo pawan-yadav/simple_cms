@@ -1,7 +1,7 @@
 # front end helpers
 module ApplicationHelper
   def label_for_param(param_controller)
-    param_controller.tr('admin/', '').tr('_', ' ').titleize
+    param_controller.gsub('admin/', '').gsub('_', ' ').titleize
   end
 
   def display_date(date)
