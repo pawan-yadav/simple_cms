@@ -16,3 +16,7 @@
 !/log/.keep
 /tmp
 .env
+
+# Ignore public files
+/public/images/*
+/public/system/*
