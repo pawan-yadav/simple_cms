@@ -52,6 +52,7 @@ end
 # --------------------------------------------------
 gem 'acts_as_list', '0.7.2'
 gem 'friendly_id', '5.1.0'
+gem 'will_paginate', '3.0.7'
 
 # --------------------------------------------------
 # CSS and Front End Resource Gems

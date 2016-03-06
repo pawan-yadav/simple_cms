@@ -4,7 +4,7 @@ class PagesController < ApplicationController
     @page = Page.friendly.find(params[:id])
     @banner_images = BannerImage.where(page_id: @page.id).order('id ASC')
     @images = Image.where(page_id: @page.id).order('id ASC')
-    @posts = @page.posts.order('date DESC')
+    @posts = @page.posts.paginate(:page => params[:page], :per_page => 3).order('date DESC')
     @contact_form = ContactForm.new
   end
 

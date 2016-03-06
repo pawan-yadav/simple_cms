@@ -1,0 +1,8 @@
+<% unless @posts.blank? %>
+  <h3>Other News</h3>
+  <ul>
+    <% for post in @posts.reverse_order.limit(10) %>
+      <li><%= link_to(post.name, postpath_path(post)) %></li>
+    <% end %>
+  </ul>
+<% end %>

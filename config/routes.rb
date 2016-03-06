@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/admin/style_guide' => "admin/admin#style_guide"
   get '/admin/menu' => "admin/menu#index"
   post '/pages/create_contact_form' => "pages#create_contact_form"
+  get '/posts/:id' => 'posts#show', :as => 'postpath'
 
 
   namespace :admin do
