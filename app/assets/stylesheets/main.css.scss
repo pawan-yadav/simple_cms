@@ -15,46 +15,46 @@ $light: #eee;
 
 
 body {
-	
+
 }
 
 
 .main_wrapper {
-	max-width: $max-page-size;
-	margin:0 auto;
+  max-width: $max-page-size;
+  margin:0 auto;
 }
 
 .navbar {
-	background: $light;
-	border-radius: 0px;
-	border: 0px;
-	.container-fluid {
-		max-width: $max-page-size;
-		margin:0 auto;
-	}
+  background: $light;
+  border-radius: 0px;
+  border: 0px;
+  .container-fluid {
+    max-width: $max-page-size;
+    margin:0 auto;
+  }
 }
 
 .dropdown {
-	@include respond-to(768) {
-		&:hover {
-			ul {
-				display:block;
-			}
-		}
-	}
-	.dropdown-menu {
-		@media(max-width:767px) {
-			display: block;
-			position: relative;
-			width: 100%;
-			background: none;
-			box-shadow: none;
-			border:none;
-		}
-		li {
-			a {
+  @include respond-to(768) {
+    &:hover {
+      ul {
+        display:block;
+      }
+    }
+  }
+  .dropdown-menu {
+    @media(max-width:767px) {
+      display: block;
+      position: relative;
+      width: 100%;
+      background: none;
+      box-shadow: none;
+      border:none;
+    }
+    li {
+      a {
 
-			}
-		}
-	}
+      }
+    }
+  }
 }

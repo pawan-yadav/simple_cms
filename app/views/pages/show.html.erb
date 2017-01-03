@@ -1,33 +1,33 @@
 <!-- Page Banner Images -->
 <% if @banner_images.count > 0 && Page::SHOW_BANNER_IMAGES == 'true' %>
-	<div class="banner_images">
-		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <div class="banner_images">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-		  <!-- Wrapper for slides -->
-		  <div class="carousel-inner" role="listbox">
-		  	<% for image in @banner_images %>
-			    <div class="item <%= image == @banner_images.first ? 'active' : '' %>">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <% for image in @banner_images %>
+          <div class="item <%= image == @banner_images.first ? 'active' : '' %>">
             <%= image_tag image.photo.url(:banner), alt: image.headline %>
-			      <div class="carousel-caption">
-			        <%= image.caption %>
-			      </div>
-			    </div>
-			  <% end %>
-		  </div>
+            <div class="carousel-caption">
+              <%= image.caption %>
+            </div>
+          </div>
+        <% end %>
+      </div>
 
       <!-- Controls -->
       <% if @banner_images.count > 1 %>
-  		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-  		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-  		    <span class="sr-only">Previous</span>
-  		  </a>
-  		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-  		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-  		    <span class="sr-only">Next</span>
-  		  </a>
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       <% end %>
-		</div>
-	</div>
+    </div>
+  </div>
 <% end %>
 
 
@@ -39,8 +39,8 @@
 
 <!-- Page Images -->
 <% if @images.count > 0 && Page::SHOW_IMAGES == 'true' %>
-	<div class="page_images">
-		<% for row in @images.in_groups_of(4) %>
+  <div class="page_images">
+    <% for row in @images.in_groups_of(4) %>
       <div class="row">
         <% for image in row %>
           <% unless image.blank? %>
@@ -53,49 +53,49 @@
         <% end %>
       </div>
     <% end %>
-	</div>
+  </div>
 <% end %>
 
 <!-- Show posts if any belong to page -->
 <% if @posts %>
-	<% for post in @posts %>
-		<h2><%= post.name %> <small><%= display_date post.date %></small></h2>
-		<%= post.body.html_safe %>
+  <% for post in @posts %>
+    <h2><%= post.name %> <small><%= display_date post.date %></small></h2>
+    <%= post.body.html_safe %>
 
-		<!-- Page Images -->
-		<% if post.images.count > 0 && Post::SHOW_IMAGES == 'true' %>
-			<div class="page_images">
-				<% for row in post.images.in_groups_of(4) %>
-		      <div class="row">
-		        <% for image in row %>
-		          <% unless image.blank? %>
-		            <div class="col-sm-3">
-		              <%= link_to image_url(image.photo), :class => 'fancybox', :rel => 'group', :title => image.caption do %>
-		                <%= image_tag(image.photo.url(:medium), :class => 'img-responsive img-thumbnail') %>
-		              <% end %>
-		            </div>
-		          <% end %>
-		        <% end %>
-		      </div>
-		    <% end %>
-			</div>
-		<% end %>
-	<% end %>
+    <!-- Page Images -->
+    <% if post.images.count > 0 && Post::SHOW_IMAGES == 'true' %>
+      <div class="page_images">
+        <% for row in post.images.in_groups_of(4) %>
+          <div class="row">
+            <% for image in row %>
+              <% unless image.blank? %>
+                <div class="col-sm-3">
+                  <%= link_to image_url(image.photo), :class => 'fancybox', :rel => 'group', :title => image.caption do %>
+                    <%= image_tag(image.photo.url(:medium), :class => 'img-responsive img-thumbnail') %>
+                  <% end %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
 <% end %>
 
 <!-- The form for the contact page -->
 <% if @page.id == 3 %>
-	<%= simple_form_for @contact_form, :url => { :controller => 'pages', :action => 'create_contact_form' } do |f| %>
-		<%= f.input :name %>
-		<div class="row">
-			<div class="col-sm-6">
-				<%= f.input :phone_number %>
-			</div>
-			<div class="col-sm-6">
-				<%= f.input :email_address %>
-			</div>
-		</div>
-		<%= f.input :comments %>
-		<%= f.submit 'Submit', :class => 'btn btn-primary' %>
-	<% end %>
+  <%= simple_form_for @contact_form, :url => { :controller => 'pages', :action => 'create_contact_form' } do |f| %>
+    <%= f.input :name %>
+    <div class="row">
+      <div class="col-sm-6">
+        <%= f.input :phone_number %>
+      </div>
+      <div class="col-sm-6">
+        <%= f.input :email_address %>
+      </div>
+    </div>
+    <%= f.input :comments %>
+    <%= f.submit 'Submit', :class => 'btn btn-primary' %>
+  <% end %>
 <% end %>

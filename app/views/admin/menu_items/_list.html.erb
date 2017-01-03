@@ -1,41 +1,41 @@
 <div class="row">
-	<div class="col-sm-12">
-		<ul class="list-group">
-			<% for menu_item in @menu_items %>
-				<li class="list-group-item">
-					<div class="row">
-						<div class="col-sm-6">
-							<%= link_to menu_item.page.name, edit_admin_menu_item_path(menu_item.id) %>
-						</div>
-						<div class="col-sm-6 text-right">
-							<%= link_to(url_for(:controller => 'admin/menu_items', :action => 'move_up', :menu_item_id => menu_item.id), :format => :js, :remote => true) do %>
-								<span class="glyphicon glyphicon-circle-arrow-up"></span>
-							<% end %>
-							<%= link_to(url_for(:controller => 'admin/menu_items', :action => 'move_down', :menu_item_id => menu_item.id), :format => :js, :remote => true) do %>					
-								<span class="glyphicon glyphicon-circle-arrow-down"></span>
-							<% end %>
+  <div class="col-sm-12">
+    <ul class="list-group">
+      <% for menu_item in @menu_items %>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-sm-6">
+              <%= link_to menu_item.page.name, edit_admin_menu_item_path(menu_item.id) %>
+            </div>
+            <div class="col-sm-6 text-right">
+              <%= link_to(url_for(:controller => 'admin/menu_items', :action => 'move_up', :menu_item_id => menu_item.id), :format => :js, :remote => true) do %>
+                <span class="glyphicon glyphicon-circle-arrow-up"></span>
+              <% end %>
+              <%= link_to(url_for(:controller => 'admin/menu_items', :action => 'move_down', :menu_item_id => menu_item.id), :format => :js, :remote => true) do %>
+                <span class="glyphicon glyphicon-circle-arrow-down"></span>
+              <% end %>
 
-							<%= link_to(url_for(:controller => 'admin/menu_items', :action => 'destroy', :menu_item_id => menu_item.id), data: { confirm: 'Are you sure?' }) do %>
-								<span class="glyphicon glyphicon-trash"></span>
-							<% end %>
-						</div>
-					</div>
+              <%= link_to(url_for(:controller => 'admin/menu_items', :action => 'destroy', :menu_item_id => menu_item.id), data: { confirm: 'Are you sure?' }) do %>
+                <span class="glyphicon glyphicon-trash"></span>
+              <% end %>
+            </div>
+          </div>
 
-					<% if menu_item.menu_items %>
-						<ul>
-							<% for sub_menu_item in menu_item.menu_items %>
-								<li>
-									<%= link_to sub_menu_item.page.name, edit_admin_menu_item_path(sub_menu_item) %>
-									
-									<%= link_to(url_for(:controller => 'admin/menu_items', :action => 'destroy', :menu_item_id => sub_menu_item.id), data: { confirm: 'Are you sure?' }) do %>
-										<span class="glyphicon glyphicon-trash"></span>
-									<% end %>
-								</li>
-							<% end %>
-						</ul>
-					<% end %>
-				</li>
-			<% end %>
-		</ul>
-	</div>
+          <% if menu_item.menu_items %>
+            <ul>
+              <% for sub_menu_item in menu_item.menu_items %>
+                <li>
+                  <%= link_to sub_menu_item.page.name, edit_admin_menu_item_path(sub_menu_item) %>
+
+                  <%= link_to(url_for(:controller => 'admin/menu_items', :action => 'destroy', :menu_item_id => sub_menu_item.id), data: { confirm: 'Are you sure?' }) do %>
+                    <span class="glyphicon glyphicon-trash"></span>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>

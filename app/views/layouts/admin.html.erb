@@ -4,30 +4,30 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
-	<head>
-	  <title>SimpleCms - Admin</title>
-	  <%= stylesheet_link_tag    'admin-application', media: 'all' %>
-	  <%= javascript_include_tag 'admin-application' %>
-	  <%= csrf_meta_tags %>
-	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	</head>
-	<body>
+  <head>
+    <title>SimpleCms - Admin</title>
+    <%= stylesheet_link_tag    'admin-application', media: 'all' %>
+    <%= javascript_include_tag 'admin-application' %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  </head>
+  <body>
 
-		<div id="wrapper">
+    <div id="wrapper">
 
         <%= render 'admin/shared/navs' %>
 
         <div id="page-wrapper">
             <div class="container-fluid">
 
-            	<%= render 'admin/shared/breadcrumbs' %>
-            	<%= render 'admin/shared/alerts' %>
+              <%= render 'admin/shared/breadcrumbs' %>
+              <%= render 'admin/shared/alerts' %>
 
-    			<%= yield %>
+          <%= yield %>
             </div>
         </div>
 
     </div>
 
-	</body>
+  </body>
 </html>

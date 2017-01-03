@@ -3,23 +3,23 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-	  <title>Simple CMS <%= @page ? "| #{@page.name}" : '' %></title>
-	  <%= stylesheet_link_tag    'application', media: 'all' %>
-	  <%= javascript_include_tag 'application' %>
-	  <%= csrf_meta_tags %>
-	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	  <meta name="description" content="<%= @page && !@page.description.blank? ? @page.description : Page::DEFAULT_DESCRIPTION %>">
-	  <meta name="keywords" content="<%= @page && !@page.keywords.blank? ? @page.keywords : Page::DEFAULT_KEYWORDS %>">
-	</head>
-	<body>
+  <head>
+    <title>Simple CMS <%= @page ? "| #{@page.name}" : '' %></title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="<%= @page && !@page.description.blank? ? @page.description : Page::DEFAULT_DESCRIPTION %>">
+    <meta name="keywords" content="<%= @page && !@page.keywords.blank? ? @page.keywords : Page::DEFAULT_KEYWORDS %>">
+  </head>
+  <body>
 
-		<%= render 'shared/menu' %>
-		<div class="container main_wrapper">
-			<%= render 'shared/alerts' %>
+    <%= render 'shared/menu' %>
+    <div class="container main_wrapper">
+      <%= render 'shared/alerts' %>
 
-			<%= yield %>
-		</div>
+      <%= yield %>
+    </div>
 
-	</body>
+  </body>
 </html>

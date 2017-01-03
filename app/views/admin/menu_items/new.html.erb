@@ -2,8 +2,8 @@
 
 <%= simple_form_for @menu_item, :url => url_for(:controller => 'admin/menu_items', :action => 'create'), :method => 'post', :html => { :role => "form" } do |form| %>
 
-	<%= render :partial => 'form', :object => form %>
-	
-	<%= submit_tag 'Submit Menu Item', :class => 'btn btn-primary' %>
+  <%= render :partial => 'form', :object => form %>
+
+  <%= submit_tag 'Submit Menu Item', :class => 'btn btn-primary' %>
 
 <% end %>

@@ -2,8 +2,8 @@
 
 <%= simple_form_for @blog_post, :url => url_for(:controller => 'admin/blog_posts', :action => 'create'), :method => 'post', :html => { :role => "form" } do |form| %>
 
-	<%= render :partial => 'form', :object => form %>
-	
-	<%= submit_tag 'Submit Post', :class => 'btn btn-primary' %>
+  <%= render :partial => 'form', :object => form %>
+
+  <%= submit_tag 'Submit Post', :class => 'btn btn-primary' %>
 
 <% end %>

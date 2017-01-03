@@ -1,4 +1,4 @@
 $(document).ready(function() {
-	// Popup for page images
-	$(".fancybox").fancybox();
+  // Popup for page images
+  $(".fancybox").fancybox();
 });

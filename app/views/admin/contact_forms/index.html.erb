@@ -1,20 +1,20 @@
 <div class="row">
-	<div class="col-sm-12">
-		<ul class="list-group">
-			<% for contact_form in @contact_forms %>
-				<li class="list-group-item">
-					<div class="row">
-						<div class="col-sm-6">
-							<%= link_to contact_form.name, admin_contact_form_path(contact_form) %>
-							<%= display_date(contact_form.created_at) %>
-						</div>
-						<div class="col-sm-6 text-right">
-							<%= link_to(url_for(:controller => 'admin/contact_forms', :action => 'destroy', :contact_form_id => contact_form.id), data: { confirm: 'Are you sure?' }) do %>
-								<span class="glyphicon glyphicon-trash"></span>
-							<% end %>
-						</div>
-				</li>
-			<% end %>
-		</ul>
-	</div>
+  <div class="col-sm-12">
+    <ul class="list-group">
+      <% for contact_form in @contact_forms %>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-sm-6">
+              <%= link_to contact_form.name, admin_contact_form_path(contact_form) %>
+              <%= display_date(contact_form.created_at) %>
+            </div>
+            <div class="col-sm-6 text-right">
+              <%= link_to(url_for(:controller => 'admin/contact_forms', :action => 'destroy', :contact_form_id => contact_form.id), data: { confirm: 'Are you sure?' }) do %>
+                <span class="glyphicon glyphicon-trash"></span>
+              <% end %>
+            </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>

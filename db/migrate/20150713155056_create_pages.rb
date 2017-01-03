@@ -1,12 +1,12 @@
 class CreatePages < ActiveRecord::Migration
   def change
     create_table :pages do |t|
-    	t.integer :page_id
-    	t.string :name
-    	t.text :description
-    	t.text :keywords
-    	t.text :body
-    	t.string :slug
+      t.integer :page_id
+      t.string :name
+      t.text :description
+      t.text :keywords
+      t.text :body
+      t.string :slug
 
       t.timestamps null: false
     end
