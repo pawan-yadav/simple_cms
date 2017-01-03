@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/websitescenes/simple_cms.svg?branch=master)](https://travis-ci.org/websitescenes/simple_cms)
-[![Coverage Status](https://coveralls.io/repos/websitescenes/simple_cms/badge.svg?branch=develop&service=github)](https://coveralls.io/github/websitescenes/simple_cms?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/websitescenes/simple_cms/badge.svg?branch=master&service=github)](https://coveralls.io/github/websitescenes/simple_cms?branch=master)
 
 ![Alt text](http://www.ghostcake.com/cms-logo.jpg "Ruby on Rails Content Management System")
 
