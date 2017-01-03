@@ -1,9 +1,9 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # --------------------------------------------------
 # Supported Rubies
 # --------------------------------------------------
-ruby '2.2.2'
+ruby '2.3.3'
 
 # --------------------------------------------------
 # Database gems
@@ -12,39 +12,39 @@ ruby '2.2.2'
 gem 'sqlite3', '1.3.10'
 
 # --------------------------------------------------
-# Default Rails 4.2.3 gems
+# Default Rails gems
 # --------------------------------------------------
-gem 'rails', '4.2.3'
-gem 'sass-rails', '5.0.3'
-gem 'uglifier', '2.7.1'
-gem 'coffee-rails', '4.1.0'
-gem 'jquery-rails', '4.0.4'
-gem 'turbolinks', '2.5.3'
-gem 'jbuilder', '2.3.1'
-gem 'sdoc', '0.4.1', group: :doc
+gem 'rails', '4.2.7.1'
+gem 'sass-rails', '5.0.6'
+gem 'uglifier', '3.0.4'
+gem 'coffee-rails', '4.2.1'
+gem 'jquery-rails', '4.2.2'
+gem 'turbolinks', '5.0.1'
+gem 'jbuilder', '2.6.1'
+gem 'sdoc', '0.4.2', group: :doc
 
 # --------------------------------------------------
 # Development and Test Gem Group
 # --------------------------------------------------
 group :development, :test do
   gem 'letter_opener', '1.4.1'
-  gem 'byebug', '5.0.0'
-  gem 'web-console', '2.2.1'
-  gem 'spring', '1.3.6'
-  gem 'rspec-rails', '3.3.3'
-  gem 'factory_girl_rails', '4.5.0'
-  gem 'faker'
-  gem 'database_cleaner', '1.4.1'
+  gem 'byebug', '9.0.6'
+  gem 'web-console', '3.3.0'
+  gem 'spring', '2.0.0'
+  gem 'rspec-rails', '3.5.2'
+  gem 'factory_girl_rails', '4.8.0'
+  gem 'faker', '1.7.1'
+  gem 'database_cleaner', '1.5.3'
 end
 
 # --------------------------------------------------
 # Development Only
 # --------------------------------------------------
 group :development do
-  gem 'guard-rails', '0.7.2', require: false
-  gem 'rubocop', '0.35.1', require: false
+  gem 'guard-rails', '0.8.0', require: false
+  gem 'rubocop', '0.46.0', require: false
   gem 'guard-rubocop', '1.2.0'
-  gem 'guard-rspec', '4.6.4', require: false
+  gem 'guard-rspec', '4.7.3', require: false
 end
 
 # --------------------------------------------------
