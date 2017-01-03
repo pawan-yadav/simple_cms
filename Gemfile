@@ -29,7 +29,6 @@ gem 'sdoc', '0.4.2', group: :doc
 group :development, :test do
   gem 'letter_opener', '1.4.1'
   gem 'byebug', '9.0.6'
-  gem 'web-console', '3.3.0'
   gem 'spring', '2.0.0'
   gem 'rspec-rails', '3.5.2'
   gem 'factory_girl_rails', '4.8.0'
@@ -45,6 +44,7 @@ group :development do
   gem 'rubocop', '0.46.0', require: false
   gem 'guard-rubocop', '1.2.0'
   gem 'guard-rspec', '4.7.3', require: false
+  gem 'web-console', '3.3.0'
 end
 
 # --------------------------------------------------
